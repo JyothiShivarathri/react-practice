@@ -1,95 +1,90 @@
-/* ---------- GLOBAL ---------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 body {
-  background-color: #f9f9f9;
   color: #333;
+  background-color: #f9f9f9;
 }
 
-/* ---------- HEADER ---------- */
 .header {
-  display: flex;
+  z-index: 10;
+  background-color: #fff;
   justify-content: space-between;
   align-items: center;
   padding: 16px 48px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
   position: sticky;
   top: 0;
-  z-index: 10;
+  box-shadow: 0 2px 6px #0000000d;
 }
 
 .logo-container img {
-  width: 80px;
-  height: 80px;
   object-fit: cover;
   border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
 
 .nav-items ul {
-  display: flex;
-  list-style: none;
   gap: 24px;
+  list-style: none;
+  display: flex;
 }
 
 .nav-items li {
   cursor: pointer;
-  font-weight: 500;
   color: #444;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color .3s;
 }
 
 .nav-items li:hover {
   color: #ff6b00;
 }
 
-/* ---------- BODY ---------- */
 .Body {
   padding: 32px 48px;
 }
 
-/* Search bar placeholder */
 .search {
-  background-color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  margin-bottom: 24px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  font-weight: 500;
   color: #777;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 250px;
+  margin-bottom: 24px;
+  padding: 10px 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px #0000000d;
 }
 
-/* ---------- RESTAURANT CARDS ---------- */
 .res-container {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 24px;
+  display: grid;
 }
 
 .res-card {
+  cursor: pointer;
   background-color: #fff;
   border-radius: 12px;
+  transition: transform .2s, box-shadow .2s;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
+  box-shadow: 0 3px 8px #00000014;
 }
 
 .res-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 16px #0000001f;
 }
 
 .res-img {
+  object-fit: cover;
   width: 100%;
   height: 160px;
-  object-fit: cover;
 }
 
 .res-info {
@@ -97,26 +92,27 @@ body {
 }
 
 .res-info h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
   color: #222;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 .res-info p {
-  font-size: 14px;
   color: #666;
   margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .res-meta {
-  display: flex;
+  color: #444;
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  color: #444;
+  display: flex;
 }
 
 .res-meta span:first-child {
-  color: #ff9900;
+  color: #f90;
   font-weight: 600;
 }
+/*# sourceMappingURL=react.3a01df49.css.map */
