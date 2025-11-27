@@ -6,6 +6,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
+import RestaurantInfo from "./components/RestaurantInfo";
 const AppLayout = () => {
   // console.log(<Body/>,"BDD")
   const [listOfResturants, setListofRestaurents] = useState([]);
@@ -13,13 +14,20 @@ const AppLayout = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
+    const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-host': 'pizza-and-desserts.p.rapidapi.com',
+    "X-RapidAPI-Key": "775a4f6b11mshb6174685d1531a7p14210fjsn9bac0956d70a"
+
+	}
+};
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4511223&lng=78.40874889999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://pizza-and-desserts.p.rapidapi.com/desserts",options
     );
     const RestCardData = await data.json();
-    const listOfResturants =
-      RestCardData.data.cards[1].card.card.gridElements.infoWithStyle
-        .restaurants;
+    console.log(RestCardData,"res");
+    const listOfResturants =RestCardData
     setListofRestaurents(listOfResturants);
   };
   return (
@@ -49,6 +57,10 @@ const appRouter = createBrowserRouter([
         path: "/Contact",
         element: <Contact />,
       },
+      {
+        path:"/restaurant/:resid",
+        element:<RestaurantInfo/>
+      }
     ],
   },
 ]);

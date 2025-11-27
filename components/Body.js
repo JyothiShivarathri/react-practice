@@ -24,7 +24,7 @@ const Body=()=>{
     </div>
     <div className="res-container">
         {filterRestaurents.map(restObj=>{
-             return  <RestaurantCard  restObj={restObj.info} key={restObj.info.id}/>
+             return  <RestaurantCard  restObj={restObj} key={restObj.id}/>
         })
     }
 

@@ -1,7 +1,8 @@
 
 const RestaurantCard = (props) => {
 //    console.log("******",props)
-   const {name,cuisines,avgRating,sla,cloudinaryImageId}=props.restObj
+//    const {name,cuisines,avgRating,sla,cloudinaryImageId}=props.restObj
+   const{name,description,price,quantity,img}=props.restObj
 //    console.log("#########",{name,cuisines,avgRating,deliveryTime,cloudinaryImageId});
     //   console.log("#########",name);
    
@@ -9,15 +10,18 @@ const RestaurantCard = (props) => {
         <div className="res-card">
             <img
                 className="res-img"
-                src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${cloudinaryImageId}`} alt="Restaurant"
+                src={img}
             />
             <div className="res-info">
                 <h3>{name}</h3>
-                <p>{cuisines.join(',')}</p>
+                {/* <p>{cuisines.join(',')}</p> */}
+                <p>{description}</p>
                 <div className="res-meta">
-                    <span>⭐ {avgRating}</span>
+                    {/* <span>⭐ {avgRating}</span> */}
+                    <span>{price}</span>
                     <span>•</span>
-                    <span>{sla.slaString}</span>
+                    <span>{quantity}</span>
+                    {/* <span>{sla.slaString}</span> */}
                 </div>
             </div>
         </div>

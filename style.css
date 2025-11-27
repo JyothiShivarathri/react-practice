@@ -122,3 +122,47 @@ body {
   color: #ff9900;
   font-weight: 600;
 }
+.restaurant-card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.restaurant-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurant-name {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.restaurant-desc {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.restaurant-price,
+.restaurant-quantity {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #444;
+}
